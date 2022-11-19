@@ -15,6 +15,9 @@ cp -r ./home/.themes/* $USERHOME/.themes/
 sudo cp ./cinnamon.css /usr/share/themes/Mint-Y-Dark/cinnamon/cinnamon.css
 dconf load / < my-cinnamon.dconf
 
+#gitconfig
+cp ./home/.gitconfig $USERHOME
+
 # my programs
 cp -r ./home/myPrograms $USERHOME
 
