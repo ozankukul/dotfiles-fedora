@@ -25,8 +25,8 @@
   rbt  RA-9
   lbe  RA-7
   rbe  RA-0
-  lpr  S-8
-  rpr  S-9
+  lpr  #(S-8 P1)
+  rpr  #(S-9 P1)
   til  RA-]
   at   RA-q
   hsh  RA-3
