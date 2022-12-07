@@ -39,4 +39,4 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 
 # install programs
 sudo dnf install -y openh264 git code flatpak steam
-sudo flatpak install flatseal telegram discord zoom
+sudo flatpak install flathub flatseal telegram discord zoom
