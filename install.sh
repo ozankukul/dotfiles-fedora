@@ -13,7 +13,10 @@ mkdir -p $fontdir && cp -r home/.local/share/fonts/* $fontdir
 cp -r home/.cinnamon $USERHOME
 cp -r home/.config/* $USERHOME/.config/
 cp -r home/.themes/* $USERHOME/.themes/
-dconf load / < my-cinnamon.dconf
+
+# load dconf
+echo user-db:user > temporary-profile
+DCONF_PROFILE="$(pwd)/temporary-profile" dconf load / < my-cinnamon.dconf
 
 #dotfiles
 cp home/.gitconfig home/.bashrc home/.tmux.conf $USERHOME
