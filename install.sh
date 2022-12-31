@@ -7,22 +7,22 @@ sudo dnf update -y
 
 #fonts
 fontdir="$USERHOME/.local/share/fonts/"
-mkdir -p $fontdir && cp -r ./home/.local/share/fonts/* $fontdir
+mkdir -p $fontdir && cp -r home/.local/share/fonts/* $fontdir
 
 # cinnamond desktop configuration
-cp -r ./home/.cinnamon $USERHOME
-cp -r ./home/.config/* $USERHOME/.config/
-cp -r ./home/.themes/* $USERHOME/.themes/
+cp -r home/.cinnamon $USERHOME
+cp -r home/.config/* $USERHOME/.config/
+cp -r home/.themes/* $USERHOME/.themes/
 dconf load / < my-cinnamon.dconf
 
 #dotfiles
-cp ./home/.gitconfig ./home/.bashrc ./home/.tmux.conf $USERHOME
+cp home/.gitconfig home/.bashrc home/.tmux.conf $USERHOME
 
 # my programs
-cp -r ./home/myPrograms $USERHOME
+cp -r home/myPrograms $USERHOME
 
 # services
-sudo cp ./services/kmonad.service /etc/systemd/system/kmonad.service
+sudo cp services/kmonad.service /etc/systemd/system/kmonad.service
 sudo systemctl enable kmonad.service
 sudo systemctl start kmonad.service
 
