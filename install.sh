@@ -3,7 +3,7 @@
 USERHOME=$HOME
 WORKDIR=$(pwd)
 
-dnf remove -y libreoffice* mpv parole hexchat pidgin onboard
+sudo dnf remove -y libreoffice* mpv parole hexchat pidgin onboard
 sudo dnf update -y
 
 #fonts
@@ -19,7 +19,7 @@ cp -r home/.themes/* $USERHOME/.themes/
 echo user-db:user > temporary-profile
 DCONF_PROFILE="$(pwd)/temporary-profile" dconf load / < my-cinnamon.dconf
 
-#dotfiles
+# dotfiles
 cp home/.gitconfig home/.bashrc home/.tmux.conf $USERHOME
 
 # my programs
@@ -48,7 +48,8 @@ echo "nameserver 1.1.1.1" | sudo tee -a /etc/resolv.conf
 echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
 
 # firefox
-test -n "`find ~/.mozilla/firefox/*.default-release`" && cp home/.mozilla/firefox/.default-release $USERHOME/.mozilla/firefox/*.default-release
+FIREFOX=`find $USERHOME/.mozilla/firefox/*.default-release | head -n 1`
+test -n "$FIREFOX" && cp -rf home/.mozilla/firefox/.default-release/* $FIREFOX
 
 # rpm fusion
 sudo dnf -y install dnf-plugins-core
