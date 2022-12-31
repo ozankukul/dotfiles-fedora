@@ -44,5 +44,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
 # install programs
-sudo dnf install -y openh264 git code flatpak steam
-sudo flatpak install flathub flatseal telegram discord zoom
+sudo dnf install -y openh264 htop bat git code steam telegram flatpak
+sudo flatpak install -y flathub flatseal discord zoom onlyoffice
+dnf remove -y libreoffice* mpv parole hexchat pidgin onboard
