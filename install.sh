@@ -3,6 +3,7 @@
 USERHOME=$HOME
 WORKDIR=$(pwd)
 
+dnf remove -y libreoffice* mpv parole hexchat pidgin onboard
 sudo dnf update -y
 
 #fonts
@@ -53,4 +54,3 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 # install programs
 sudo dnf install -y openh264 htop bat git code steam telegram flatpak
 sudo flatpak install -y flathub flatseal discord zoom onlyoffice
-dnf remove -y libreoffice* mpv parole hexchat pidgin onboard
