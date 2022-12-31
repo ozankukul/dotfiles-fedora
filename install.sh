@@ -36,6 +36,13 @@ sudo rm add-desklets.nemo_action change-background.nemo_action new-launcher.nemo
 cd $WORKDIR
 cp home/.local/share/nemo/actions/vscode.nemo_action $USERHOME/.local/share/nemo/actions/
 
+# login window config
+echo "[Greeter]\
+background=/usr/share/backgrounds/tiles/blackscreen\
+theme-name=Mint-Y-Dark\
+icon-theme-name=Mint-Y-Dark\
+" | sudo tee /etc/lightdm/slick-greeter.conf
+
 # set dns
 echo "nameserver 1.1.1.1" | sudo tee -a /etc/resolv.conf
 echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
