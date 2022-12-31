@@ -16,7 +16,7 @@ cp -r ./home/.themes/* $USERHOME/.themes/
 dconf load / < my-cinnamon.dconf
 
 #dotfiles
-cp ./home/.gitconfig ./home/.bashrc $USERHOME
+cp ./home/.gitconfig ./home/.bashrc ./home/.tmux.conf $USERHOME
 
 # my programs
 cp -r ./home/myPrograms $USERHOME
