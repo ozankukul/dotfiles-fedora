@@ -15,8 +15,8 @@ cp -r ./home/.config/* $USERHOME/.config/
 cp -r ./home/.themes/* $USERHOME/.themes/
 dconf load / < my-cinnamon.dconf
 
-#gitconfig
-cp ./home/.gitconfig $USERHOME
+#dotfiles
+cp ./home/.gitconfig ./home/.bashrc $USERHOME
 
 # my programs
 cp -r ./home/myPrograms $USERHOME
