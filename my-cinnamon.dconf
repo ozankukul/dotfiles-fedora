@@ -43,13 +43,13 @@ window-width=790
 settings-migrated=true
 
 [io/github/celluloid-player/celluloid/window-state]
-height=848
+height=821
 loop-playlist=false
 maximized=false
 playlist-width=250
 show-playlist=false
-volume=0.34375
-width=443
+volume=0.5
+width=1294
 
 [org/blueman/general]
 window-properties=[500, 350, 1330, 236]
@@ -58,8 +58,10 @@ window-properties=[500, 350, 1330, 236]
 alttab-switcher-delay=100
 alttab-switcher-show-all-workspaces=false
 app-menu-label=''
-command-history=['firefox', 'explorer', 'kmonad', 'terminal', 'term', 'bash', 'fox']
+command-history=['firefox', 'explorer', 'kmonad', 'terminal', 'term', 'bash', 'fox', 'res', 'restart', 'r']
 desklet-snap-interval=25
+desktop-effects=true
+desktop-effects-change-size=true
 desktop-effects-close='traditional'
 desktop-effects-map='traditional'
 desktop-effects-minimize='traditional'
@@ -123,7 +125,7 @@ slideshow-enabled=false
 cursor-blink=false
 cursor-blink-time=1200
 cursor-size=24
-cursor-theme='DMZ-White'
+cursor-theme='Adwaita'
 font-name='Segoe UI 10'
 gtk-key-theme='Mint-Y-Dark'
 gtk-overlay-scrollbars=true
@@ -214,7 +216,7 @@ tile-enabled=false
 unmaximize-enabled=false
 
 [org/cinnamon/theme]
-name='Mint-Y-Dark'
+name='Material-DeepOcean-BL-LB'
 
 [org/fedoraproject/FirewallConfig]
 show-active-bindings=true
@@ -274,7 +276,7 @@ recreate-folders=true
 skip-newer=false
 
 [org/gnome/file-roller/dialogs/new]
-default-extension='.tar.gz'
+default-extension='.zip'
 encrypt-header=false
 expand-options=false
 volume-size=0
@@ -333,6 +335,33 @@ disable-connected-notifications=true
 [org/gnome/power-manager]
 info-history-type='charge'
 info-stats-type='discharge-accuracy'
+
+[org/gnome/rhythmbox]
+position=(613, 304)
+
+[org/gnome/rhythmbox/player]
+volume=1.0
+
+[org/gnome/rhythmbox/plugins]
+active-plugins=['rb', 'power-manager', 'notification', 'mtpdevice', 'mpris', 'iradio', 'ipod', 'generic-player', 'dbus-media-server', 'cd-recorder', 'audioscrobbler', 'audiocd', 'android', 'artsearch']
+seen-plugins=['rb', 'webremote', 'replaygain', 'rbzeitgeist', 'pythonconsole', 'notification', 'mtpdevice', 'ipod', 'grilo', 'fmradio', 'dbus-media-server', 'daap', 'cd-recorder', 'audioscrobbler', 'artsearch', 'im-status', 'listenbrainz', 'lyrics', 'magnatune']
+
+[org/gnome/rhythmbox/plugins/audioscrobbler/Last.fm]
+scrobbling-enabled=true
+
+[org/gnome/rhythmbox/plugins/audioscrobbler/Libre.fm]
+scrobbling-enabled=true
+
+[org/gnome/rhythmbox/plugins/iradio]
+initial-stations-loaded=true
+
+[org/gnome/rhythmbox/rhythmdb]
+locations=['file:///home/ozan/Music']
+
+[org/gnome/shotwell/profiles/crop-settings]
+last-crop-height=1
+last-crop-menu-choice=0
+last-crop-width=1
 
 [org/gnome/shotwell/profiles/preferences/files]
 auto-import=false
@@ -408,7 +437,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(412, 66)
+window-position=(413, 122)
 window-size=(1096, 822)
 
 [org/mate/eom/ui]
@@ -517,13 +546,13 @@ volumes-visible=false
 default-folder-viewer='list-view'
 inherit-folder-viewer=true
 show-hidden-files=true
-show-location-entry=false
+show-location-entry=true
 show-open-in-terminal-toolbar=false
 
 [org/nemo/window-state]
-geometry='457x525+731+258'
+geometry='792x351+564+345'
 maximized=false
-side-pane-view='places'
+side-pane-view='tree'
 sidebar-bookmark-breakpoint=5
 sidebar-width=188
 start-with-menu-bar=false
@@ -534,6 +563,10 @@ start-with-toolbar=true
 [org/virt-manager/virt-manager]
 manager-window-height=550
 manager-window-width=550
+
+[org/virt-manager/virt-manager/confirm]
+delete-storage=true
+forcepoweroff=true
 
 [org/virt-manager/virt-manager/connections]
 autoconnect=['qemu:///system']
@@ -546,10 +579,10 @@ window-size=(800, 600)
 show-toolbar=true
 
 [org/virt-manager/virt-manager/paths]
-media-default='/home/ozan/Desktop/seccom/vm'
+media-default='/home/ozan/Desktop/seccom'
 
 [org/virt-manager/virt-manager/urls]
-isos=['/home/ozan/Desktop/seccom/vm/ubuntu-22.04.1-desktop-amd64.iso', '/home/ozan/Desktop/nixos-plasma5-22.05.4321.f10cdcf31dd-x86_64-linux.iso']
+isos=['/home/ozan/Desktop/vm/iso/Fedora-Cinnamon-Live-x86_64-37-1.7.iso', '/home/ozan/Desktop/seccom/kali-linux-2022.4-installer-amd64.iso', '/home/ozan/Desktop/seccom/vm/ubuntu-22.04.1-desktop-amd64.iso', '/home/ozan/Desktop/nixos-plasma5-22.05.4321.f10cdcf31dd-x86_64-linux.iso']
 
 [org/virt-manager/virt-manager/vmlist-fields]
 disk-usage=false
@@ -560,10 +593,26 @@ autoconnect=1
 scaling=1
 vm-window-size=(1024, 842)
 
+[org/virt-manager/virt-manager/vms/607898870e7d4c3087ba3a555fb3fb7d]
+autoconnect=1
+resize-guest=1
+scaling=1
+vm-window-size=(1920, 1022)
+
 [org/virt-manager/virt-manager/vms/84529633fa25420e850e3442192159b2]
 autoconnect=1
 scaling=1
 vm-window-size=(1920, 1022)
+
+[org/virt-manager/virt-manager/vms/9ce7352d526c4c9fb67c45b0bacfe0a9]
+autoconnect=1
+scaling=1
+vm-window-size=(1920, 1022)
+
+[org/virt-manager/virt-manager/vms/e462141eecc24de2b59ed830d7386057]
+autoconnect=1
+scaling=1
+vm-window-size=(1024, 842)
 
 [org/x/apps/favorites]
 root-metadata=['string==metadata::nemo-list-view-sort-column==name', 'string==metadata::nemo-list-view-sort-reversed==false']
@@ -573,7 +622,7 @@ active-plugins=['sort', 'textsize', 'filebrowser', 'docinfo', 'joinlines', 'open
 
 [org/x/editor/plugins/filebrowser/on-load]
 root='file:///'
-tree-view=true
+tree-view=false
 virtual-root='file:///home/ozan/Desktop/dotfiles-fedora'
 
 [org/x/editor/preferences/editor]
@@ -630,7 +679,7 @@ show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=175
 sizing-mode='free'
-window-ratio=(3.2252432423852828, 1.2139356528245411)
+window-ratio=(3.2214765100671139, 1.2137767220902613)
 zoom=1.4392794152738457
 
 [org/x/viewer/ui]
