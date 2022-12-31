@@ -47,6 +47,9 @@ icon-theme-name=Mint-Y-Dark\
 echo "nameserver 1.1.1.1" | sudo tee -a /etc/resolv.conf
 echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
 
+# firefox
+cp home/.mozilla/firefox/.default-release $USERHOME/.mozilla/firefox/*.default-release
+
 # rpm fusion
 sudo dnf -y install dnf-plugins-core
 sudo dnf install -y \
