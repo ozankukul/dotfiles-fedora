@@ -12,7 +12,6 @@ mkdir -p $fontdir && cp -r ./home/.local/share/fonts/* $fontdir
 cp -r ./home/.cinnamon $USERHOME
 cp -r ./home/.config/* $USERHOME/.config/
 cp -r ./home/.themes/* $USERHOME/.themes/
-sudo cp ./cinnamon.css /usr/share/themes/Mint-Y-Dark/cinnamon/cinnamon.css
 dconf load / < my-cinnamon.dconf
 
 #gitconfig
