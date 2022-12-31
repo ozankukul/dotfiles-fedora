@@ -16799,6 +16799,11 @@ tooltip > box {
   padding: 4px 8px;
 }
 
+tooltip * {
+  background-color: transparent;
+  color: #ffffff; 
+}
+
 /*****************
  * Color Chooser *
  *****************/
