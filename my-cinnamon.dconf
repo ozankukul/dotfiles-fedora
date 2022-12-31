@@ -65,7 +65,7 @@ desktop-effects-map='traditional'
 desktop-effects-minimize='traditional'
 desktop-effects-on-dialogs=false
 desktop-effects-workspace=true
-enabled-applets=['panel1:left:0:menu@cinnamon.org:14', 'panel1:center:0:grouped-window-list@cinnamon.org:16', 'panel1:right:2:systray@cinnamon.org:17', 'panel1:right:1:xapp-status@cinnamon.org:18', 'panel1:right:3:notifications@cinnamon.org:19', 'panel1:right:4:printers@cinnamon.org:20', 'panel1:right:6:keyboard@cinnamon.org:22', 'panel1:right:7:favorites@cinnamon.org:23', 'panel1:right:8:network@cinnamon.org:24', 'panel1:right:10:power@cinnamon.org:26', 'panel1:right:11:calendar@cinnamon.org:27', 'panel1:left:1:workspace-switcher@cinnamon.org:28']
+enabled-applets=['panel1:left:0:menu@cinnamon.org:14', 'panel1:center:0:grouped-window-list@cinnamon.org:16', 'panel1:right:0:systray@cinnamon.org:17', 'panel1:right:1:xapp-status@cinnamon.org:18', 'panel1:right:2:notifications@cinnamon.org:19', 'panel1:right:4:printers@cinnamon.org:20', 'panel1:right:5:keyboard@cinnamon.org:22', 'panel1:right:6:favorites@cinnamon.org:23', 'panel1:right:7:network@cinnamon.org:24', 'panel1:right:8:power@cinnamon.org:26', 'panel1:right:9:calendar@cinnamon.org:27', 'panel1:left:1:workspace-switcher@cinnamon.org:28']
 enabled-desklets=@as []
 enabled-extensions=@as []
 favorite-apps=['mintinstall.desktop', 'cinnamon-settings.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop']
@@ -87,6 +87,8 @@ workspace-osd-visible=false
 
 [org/cinnamon/desktop/a11y/applications]
 screen-keyboard-enabled=true
+screen-magnifier-enabled=false
+screen-reader-enabled=false
 
 [org/cinnamon/desktop/a11y/keyboard]
 bouncekeys-delay=300
@@ -96,8 +98,10 @@ mousekeys-max-speed=10
 slowkeys-delay=300
 
 [org/cinnamon/desktop/a11y/mouse]
+dwell-click-enabled=false
 dwell-threshold=10
 dwell-time=1.2
+secondary-click-enabled=false
 secondary-click-time=1.2
 
 [org/cinnamon/desktop/applications/calculator]
@@ -112,7 +116,7 @@ primary-color='#000000000000'
 
 [org/cinnamon/desktop/background/slideshow]
 delay=15
-image-source='directory:///home/ozan/Pictures'
+image-source='xml:///usr/share/cinnamon-background-properties/desktop-backgrounds-basic.xml'
 slideshow-enabled=false
 
 [org/cinnamon/desktop/interface]
@@ -136,7 +140,12 @@ restart-cinnamon=@as []
 terminal=['<Super>Return', '<Primary><Alt>t']
 
 [org/cinnamon/desktop/keybindings/wm]
-close=['<Alt>F4', '<Shift><Super>c']
+close=['<Alt>F4', '<Super>q']
+switch-to-workspace-1=['<Alt><Super>1']
+switch-to-workspace-2=['<Alt><Super>2']
+switch-to-workspace-3=['<Alt><Super>3']
+switch-to-workspace-4=['<Alt><Super>4']
+switch-to-workspace-5=['<Alt><Super>5']
 
 [org/cinnamon/desktop/media-handling]
 autorun-never=false
@@ -144,7 +153,7 @@ autorun-never=false
 [org/cinnamon/desktop/peripherals/keyboard]
 delay=uint32 500
 numlock-state=false
-repeat-interval=uint32 30
+repeat-interval=uint32 19
 
 [org/cinnamon/desktop/peripherals/mouse]
 double-click=400
@@ -193,13 +202,23 @@ hinting='slight'
 rgba-order='rgb'
 
 [org/cinnamon/sounds]
+close-enabled=false
 login-enabled=false
 logout-enabled=false
+map-enabled=false
+maximize-enabled=false
+minimize-enabled=false
+notification-enabled=false
 switch-enabled=false
 tile-enabled=false
+unmaximize-enabled=false
 
 [org/cinnamon/theme]
 name='Mint-Y-Dark'
+
+[org/fedoraproject/FirewallConfig]
+show-active-bindings=true
+show-ipsets=true
 
 [org/gnome/calculator]
 accuracy=9
@@ -207,6 +226,7 @@ angle-units='degrees'
 base=10
 button-mode='basic'
 number-format='automatic'
+refresh-interval=604800
 show-thousands=false
 show-zeroes=false
 source-currency=''
@@ -241,6 +261,7 @@ show-weekdate=false
 
 [org/gnome/desktop/interface]
 clock-format='24h'
+gtk-im-module='gtk-im-context-simple:xim'
 monospace-font-name='Cascadia Mono 10'
 toolkit-accessibility=true
 
@@ -271,12 +292,12 @@ window-height=480
 window-width=600
 
 [org/gnome/gnome-screenshot]
-delay=2
-include-pointer=false
+delay=0
+include-pointer=true
 last-save-directory='file:///home/ozan/Pictures'
 
 [org/gnome/gnome-system-monitor]
-current-tab='processes'
+current-tab='resources'
 maximized=false
 network-total-in-bits=false
 show-dependencies=false
@@ -301,12 +322,47 @@ width=1464
 x=240
 y=135
 
+[org/gnome/login-screen]
+enable-fingerprint-authentication=true
+enable-password-authentication=true
+enable-smartcard-authentication=false
+
 [org/gnome/nm-applet]
 disable-connected-notifications=true
 
 [org/gnome/power-manager]
 info-history-type='charge'
 info-stats-type='discharge-accuracy'
+
+[org/gnome/shotwell/profiles/preferences/files]
+auto-import=false
+commit-metadata=false
+directory-pattern='%Y/%m/%d'
+
+[org/gnome/shotwell/profiles/preferences/ui]
+display-basic-properties=true
+display-event-comments=false
+display-extended-properties=false
+display-photo-comments=false
+display-photo-ratings=true
+display-photo-tags=true
+display-photo-titles=false
+display-search-bar=true
+display-sidebar=true
+events-sort-ascending=false
+library-photos-sort-ascending=false
+library-photos-sort-by=2
+show-welcome-dialog=false
+sidebar-position=180
+transparent-background-type='checkered'
+
+[org/gnome/shotwell/profiles/preferences/window]
+direct-height=768
+direct-maximize=false
+direct-width=1024
+library-height=768
+library-maximize=false
+library-width=1024
 
 [org/gnome/terminal/legacy]
 default-show-menubar=false
@@ -316,6 +372,7 @@ menu-accelerator-enabled=false
 toggle-menubar='F10'
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=false
 background-color='rgb(0,0,0)'
 background-transparency-percent=8
 bold-color-same-as-fg=true
@@ -346,13 +403,16 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=158
+sidebar-width=165
 sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(412, 73)
+window-position=(412, 66)
 window-size=(1096, 822)
+
+[org/mate/eom/ui]
+image-collection=false
 
 [org/mate/panel/general]
 object-id-list=['menu-bar', 'show-desktop', 'separator', 'launcher-caja', 'launcher-terminal', 'launcher-firefox', 'window-list', 'notification-area', 'xapp-status', 'clock']
@@ -457,11 +517,11 @@ volumes-visible=false
 default-folder-viewer='list-view'
 inherit-folder-viewer=true
 show-hidden-files=true
-show-location-entry=true
+show-location-entry=false
 show-open-in-terminal-toolbar=false
 
 [org/nemo/window-state]
-geometry='571x533+674+254'
+geometry='457x525+731+258'
 maximized=false
 side-pane-view='places'
 sidebar-bookmark-breakpoint=5
@@ -470,6 +530,40 @@ start-with-menu-bar=false
 start-with-sidebar=false
 start-with-status-bar=true
 start-with-toolbar=true
+
+[org/virt-manager/virt-manager]
+manager-window-height=550
+manager-window-width=550
+
+[org/virt-manager/virt-manager/connections]
+autoconnect=['qemu:///system']
+uris=['qemu:///system']
+
+[org/virt-manager/virt-manager/conns/qemu:system]
+window-size=(800, 600)
+
+[org/virt-manager/virt-manager/details]
+show-toolbar=true
+
+[org/virt-manager/virt-manager/paths]
+media-default='/home/ozan/Desktop/seccom/vm'
+
+[org/virt-manager/virt-manager/urls]
+isos=['/home/ozan/Desktop/seccom/vm/ubuntu-22.04.1-desktop-amd64.iso', '/home/ozan/Desktop/nixos-plasma5-22.05.4321.f10cdcf31dd-x86_64-linux.iso']
+
+[org/virt-manager/virt-manager/vmlist-fields]
+disk-usage=false
+network-traffic=false
+
+[org/virt-manager/virt-manager/vms/5790fb08314144edb32ef331f2f32b9f]
+autoconnect=1
+scaling=1
+vm-window-size=(1024, 842)
+
+[org/virt-manager/virt-manager/vms/84529633fa25420e850e3442192159b2]
+autoconnect=1
+scaling=1
+vm-window-size=(1920, 1022)
 
 [org/x/apps/favorites]
 root-metadata=['string==metadata::nemo-list-view-sort-column==name', 'string==metadata::nemo-list-view-sort-reversed==false']
@@ -480,7 +574,7 @@ active-plugins=['sort', 'textsize', 'filebrowser', 'docinfo', 'joinlines', 'open
 [org/x/editor/plugins/filebrowser/on-load]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/ozan/Desktop'
+virtual-root='file:///home/ozan/Desktop/dotfiles-fedora'
 
 [org/x/editor/preferences/editor]
 display-line-numbers=true
@@ -527,7 +621,17 @@ catalogs-2-10=true
 active-extensions=['23hq', 'bookmarks', 'burn_disc', 'catalogs', 'change_date', 'comments', 'contact_sheet', 'convert_format', 'desktop_background', 'edit_metadata', 'exiv2_tools', 'facebook', 'file_manager', 'file_tools', 'find_duplicates', 'flicker', 'gstreamer_tools', 'gstreamer_utils', 'image_print', 'image_rotation', 'image_viewer', 'importer', 'jpeg_utils', 'list_tools', 'oauth', 'photo_importer', 'photobucket', 'picasaweb', 'raw_files', 'red_eye_removal', 'rename_series', 'resize_images', 'search', 'selections', 'slideshow', 'webalbums']
 
 [org/x/reader/default]
-window-ratio=(3.2251562185043343, 1.2138920562523756)
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+fullscreen=false
+inverted-colors=false
+show-sidebar=false
+sidebar-page='thumbnails'
+sidebar-size=175
+sizing-mode='free'
+window-ratio=(3.2252432423852828, 1.2139356528245411)
+zoom=1.4392794152738457
 
 [org/x/viewer/ui]
 statusbar=true

@@ -43,8 +43,8 @@
   ast  -
   bsl  RA--
   fsl  S-7
-  ls   102d
-  gt   S-102d
+  lt   #(102d P1)
+  gt   #(S-102d P1)
   pip  RA-=
   btk  RA-\
 )
@@ -61,12 +61,12 @@
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
   _     esc  _    _    _    _    @til home up   end  pgup _    _    _
   _     _    _    @lws @rws _    @lbt left down rght pgdn _    _
-  _     _    _    _    _    _    _    @rbt @lbe @lpr @rpr @rbe _
+  _     _    _    _    caps _    _    @rbt @lbe @lpr @rpr @rbe _
   _     _    _              _              _    _    _    _
 )
 
 (deflayer symbols
-  _     _    @btk @ls  @gt  _    _    _    _    _    _    _    _    _
+  _     _    @btk @lt  @gt  _    _    _    _    _    _    _    _    _
   _     @at  @hsh @dol @prc @amp _    _    _    _    _    _    _    _
   _     @quo @qm  @equ @pls @fsl _    _    _    _    _    _    _
   _     @pip @squ @em  @crt @ast @bsl _    _    _    _    _    _
