@@ -1,6 +1,7 @@
 #!/bin/bash
 
 USERHOME=$HOME
+WORKDIR=$(pwd)
 
 sudo dnf update -y
 
@@ -39,3 +40,10 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 # install programs
 sudo dnf install -y openh264 git code flatpak steam
 sudo flatpak install flathub flatseal telegram discord zoom
+
+# nemo actions
+cd /usr/share/nemo/actions
+sudo rm add-desklets.nemo_action change-background.nemo_action new-launcher.nemo_action
+cd $WORKDIR
+cp home/.local/share/nemo/actions/vscode.nemo_action $USERHOME/.local/share/nemo/actions/
+
