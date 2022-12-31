@@ -36,8 +36,8 @@ cd $WORKDIR
 cp home/.local/share/nemo/actions/vscode.nemo_action $USERHOME/.local/share/nemo/actions/
 
 # set dns
-sudo echo "nameserver 1.1.1.1" >> /etc/resolv.conf
-sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+echo "nameserver 1.1.1.1" | sudo tee -a /etc/resolv.conf
+echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
 
 # rpm fusion
 sudo dnf -y install dnf-plugins-core
