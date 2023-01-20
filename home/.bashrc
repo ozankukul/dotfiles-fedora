@@ -34,6 +34,7 @@ bind 'set completion-ignore-case on'
 ## my alias
 # abbr
 alias c=clear
+alias x=exit
 alias dnf='sudo dnf'
 alias sc='sudo systemctl'
 alias ip='ip --color=auto'
