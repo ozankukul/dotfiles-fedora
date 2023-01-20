@@ -87,6 +87,9 @@ panels-show-delay=['1:0', '2:0']
 window-effect-speed=2
 workspace-osd-visible=false
 
+[org/cinnamon/cinnamon-session]
+quit-time-delay=60
+
 [org/cinnamon/desktop/a11y/applications]
 screen-keyboard-enabled=true
 screen-magnifier-enabled=false
@@ -111,6 +114,7 @@ exec='gnome-calculator'
 
 [org/cinnamon/desktop/applications/terminal]
 exec='gnome-terminal'
+exec-arg='--'
 
 [org/cinnamon/desktop/background]
 picture-options='none'
@@ -164,7 +168,9 @@ locate-pointer=false
 speed=-0.59243697478991597
 
 [org/cinnamon/desktop/peripherals/touchpad]
+disable-while-typing=false
 speed=0.0
+tap-to-click=true
 
 [org/cinnamon/desktop/privacy]
 remember-recent-files=false
@@ -185,11 +191,16 @@ theme='Mint-Y-Dark'
 theme-backup='Mint-Y-Dark'
 titlebar-font='Segoe UI 10'
 
+[org/cinnamon/launcher]
+check-frequency=300
+memory-limit=2048
+
 [org/cinnamon/muffin]
 center-new-windows=true
 draggable-border-width=10
 tile-maximize=true
 workspace-cycle=false
+workspaces-only-on-primary=false
 
 [org/cinnamon/settings-daemon/peripherals/keyboard]
 numlock-state='off'
@@ -437,7 +448,7 @@ sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(413, 122)
+window-position=(412, 148)
 window-size=(1096, 822)
 
 [org/mate/eom/ui]
@@ -550,7 +561,7 @@ show-location-entry=true
 show-open-in-terminal-toolbar=false
 
 [org/nemo/window-state]
-geometry='792x351+564+345'
+geometry='960x492+355+518'
 maximized=false
 side-pane-view='tree'
 sidebar-bookmark-breakpoint=5
@@ -679,7 +690,7 @@ show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=175
 sizing-mode='free'
-window-ratio=(3.2214765100671139, 1.2137767220902613)
+window-ratio=(2.2805016020286204, 1.2144728681302013)
 zoom=1.4392794152738457
 
 [org/x/viewer/ui]
