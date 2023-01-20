@@ -68,4 +68,4 @@ sudo dnf config-manager --set-enabled google-chrome
 
 # install programs
 sudo dnf install -y openh264 htop bat git code google-chrome-stable steam telegram flatpak
-sudo flatpak install -y flathub flatseal discord zoom onlyoffice
+sudo flatpak install -y flathub flatseal zoom onlyoffice com.discordapp.Discord
