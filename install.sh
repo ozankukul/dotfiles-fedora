@@ -65,7 +65,10 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 # enable google chrome
 sudo dnf install -y fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
+# enable flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install -y flathub
 
 # install programs
 sudo dnf install -y openh264 htop bat git code google-chrome-stable steam telegram flatpak
-sudo flatpak install -y flathub flatseal zoom onlyoffice com.discordapp.Discord
+sudo flatpak install -y flatseal onlyoffice zoom com.discordapp.Discord
