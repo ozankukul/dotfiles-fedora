@@ -1,8 +1,5 @@
-kbd_device=`sudo find /dev/input/by-path/*event-kbd | head -n 1`
-
-cat << EOF > config.kbd
 (defcfg
-  input  (device-file "$kbd_device")
+  input  (device-file "INSERT_PATH_TO_KEYBOARD_HERE")
   output (uinput-sink "kmonad configuration file")
 
   fallthrough true
@@ -49,7 +46,7 @@ cat << EOF > config.kbd
   lt   #(102d P1)
   gt   #(S-102d P1)
   pip  RA-=
-  btk  RA-\\
+  btk  RA-\
   mnu  S-f10
 )
 
@@ -57,7 +54,7 @@ cat << EOF > config.kbd
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
   @nav  _    _    _    _    _    _    _    _    _    '    ;    .
-  _     =    _    _    _    _    _    _    _    _    \\    _    _
+  _     =    _    _    _    _    _    _    _    _    \    _    _
   _     _    _              _              @sym _    _    _
 )
 
@@ -76,4 +73,3 @@ cat << EOF > config.kbd
   _     @pip @squ @em  @crt @ast @bsl _    _    _    _    _    _
   _     _    _              _              _    _    _    _
 )
-EOF
