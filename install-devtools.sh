@@ -5,7 +5,8 @@ sudo dnf install -y @virtualization hugo
 sudo dnf install -y podman nginx rabbitmq-server
 sudo dnf install -y rust golang nodejs dotnet nuget
 sudo npm install -g pnpm
-pnpm setup # && source $HOME/.bashrc
+pnpm setup && source $HOME/.bashrc
+pnpm install -g typescript
 
 # install miniconda
 miniconda="https://repo.anaconda.com/miniconda/Miniconda3-py310_22.11.1-1-Linux-x86_64.sh"
