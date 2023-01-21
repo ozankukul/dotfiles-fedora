@@ -13,7 +13,10 @@ mkdir -p $fontdir && cp -r home/.local/share/fonts/* $fontdir
 # cinnamond desktop configuration
 cp -r home/.cinnamon $USERHOME
 cp -r home/.config/* $USERHOME/.config/
-cp -r home/.themes/Material-DeepOcean-BL-LB $USERHOME/.themes/
+
+# themes
+mkdir $USERHOME/.themes
+cp -r home/.themes/* $USERHOME/.themes/
 
 # load dconf
 echo user-db:user > temporary-profile
