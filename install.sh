@@ -47,10 +47,6 @@ theme-name=Mint-Y-Dark
 icon-theme-name=Mint-Y-Dark
 " | sudo tee /etc/lightdm/slick-greeter.conf
 
-# set dns
-echo "nameserver 1.1.1.1" | sudo tee -a /etc/resolv.conf
-echo "nameserver 8.8.8.8" | sudo tee -a /etc/resolv.conf
-
 # firefox
 FIREFOX=`find $USERHOME/.mozilla/firefox/*.default-release | head -n 1`
 test -n "$FIREFOX" && cp -rf home/.mozilla/firefox/.default-release/* $FIREFOX
