@@ -19,7 +19,7 @@ mkdir $USERHOME/.themes
 cp -r home/.themes/* $USERHOME/.themes/
 
 # dotfiles
-cp home/.gitconfig home/.bashrc home/.tmux.conf $USERHOME
+cp home/.gitconfig home/.bashrc home/.inputrc home/.tmux.conf $USERHOME
 
 # my programs
 cp -r home/myPrograms $USERHOME
