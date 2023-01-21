@@ -18,10 +18,6 @@ cp -r home/.config/* $USERHOME/.config/
 mkdir $USERHOME/.themes
 cp -r home/.themes/* $USERHOME/.themes/
 
-# load dconf
-echo user-db:user > temporary-profile
-DCONF_PROFILE="$(pwd)/temporary-profile" dconf load / < my-cinnamon.dconf
-
 # dotfiles
 cp home/.gitconfig home/.bashrc home/.tmux.conf $USERHOME
 
@@ -82,3 +78,7 @@ sudo dnf install -y code google-chrome-stable steam telegram discord $onlyoffice
 # sudo dnf install -y flatpak
 # flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # flatpak install -y flathub
+
+# load dconf
+echo user-db:user > temporary-profile
+DCONF_PROFILE="$(pwd)/temporary-profile" dconf load / < my-cinnamon.dconf
