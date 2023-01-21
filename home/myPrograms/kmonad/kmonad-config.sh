@@ -1,4 +1,4 @@
-kbd_device=`find /dev/input/by-path/*event-kbd | head -n 1`
+kbd_device=`sudo find /dev/input/by-path/*event-kbd | head -n 1`
 
 cat << EOF > config.kbd
 (defcfg
@@ -76,5 +76,4 @@ cat << EOF > config.kbd
   _     @pip @squ @em  @crt @ast @bsl _    _    _    _    _    _
   _     _    _              _              _    _    _    _
 )
-
 EOF
