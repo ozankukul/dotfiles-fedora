@@ -28,10 +28,17 @@ cp home/.gitconfig home/.bashrc home/.tmux.conf $USERHOME
 # my programs
 cp -r home/myPrograms $USERHOME
 
-# services
-sudo cp services/kmonad.service /etc/systemd/system/kmonad.service
+# kmonad service
+cat << EOF | sudo tee "/etc/systemd/system/kmonad.service"
+[Unit]
+Description=My custom kmonad service
+[Service]
+ExecStart=/bin/bash -c "$HOME/myPrograms/kmonad/kmonad-config.sh; $HOME/myPrograms/kmonad/kmonad $HOME/myPrograms/kmonad/config.kbd"
+Type=oneshot
+[Install]
+WantedBy=multi-user.target
+EOF
 sudo systemctl enable kmonad.service
-sudo systemctl start kmonad.service
 
 # nemo actions
 cd /usr/share/nemo/actions

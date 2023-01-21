@@ -1,6 +1,9 @@
+kbd_device=`find /dev/input/by-path/*event-kbd | head -n 1`
+
+cat << EOF > config.kbd
 (defcfg
-  input  (device-file "/dev/input/by-id/usb-Cooler_Master_Technology_Inc._MasterKeys_Pro_L_White-event-kbd")
-  output (uinput-sink "ozankbd line3")
+  input  (device-file "$kbd_device")
+  output (uinput-sink "kmonad configuration file")
 
   fallthrough true
 
@@ -10,7 +13,7 @@
 (defsrc
   grv   1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab   q    w    e    r    t    y    u    i    o    p    [    ]    ret
-  caps  a    s    d    f    g    h    j    k    l    ;    '    \
+  caps  a    s    d    f    g    h    j    k    l    ;    '    \\
   lsft 102d  z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt            spc                 ralt rmet cmp  rctl
 )
@@ -46,14 +49,15 @@
   lt   #(102d P1)
   gt   #(S-102d P1)
   pip  RA-=
-  btk  RA-\
+  btk  RA-\\
+  mnu  S-f10
 )
 
 (deflayer qwerty
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
   @nav  _    _    _    _    _    _    _    _    _    '    ;    .
-  _     =    _    _    _    _    _    _    _    _    \    _    _
+  _     =    _    _    _    _    _    _    _    _    \\    _    _
   _     _    _              _              @sym _    _    _
 )
 
@@ -61,7 +65,7 @@
   _     _    _    _    _    _    _    _    _    _    _    _    _    _
   _     esc  _    _    _    _    @til home up   end  pgup _    _    _
   _     _    _    @lws @rws _    @lbt left down rght pgdn _    _
-  _     _    _    _    caps _    _    @rbt @lbe @lpr @rpr @rbe _
+  _     _    _    _    caps @mnu _    @rbt @lbe @lpr @rpr @rbe _
   _     _    _              _              _    _    _    _
 )
 
@@ -72,3 +76,5 @@
   _     @pip @squ @em  @crt @ast @bsl _    _    _    _    _    _
   _     _    _              _              _    _    _    _
 )
+
+EOF
