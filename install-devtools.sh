@@ -3,7 +3,7 @@
 # install devtools
 sudo dnf install -y @virtualization hugo
 sudo dnf install -y podman nginx rabbitmq-server
-sudo dnf install -y golang nodejs dotnet nuget
+sudo dnf install -y golang nodejs dotnet nuget java-17-openjdk maven
 sudo npm install -g pnpm
 pnpm setup && source $HOME/.bashrc
 pnpm install -g typescript
