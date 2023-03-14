@@ -45,7 +45,16 @@ alias pat='echo $PATH | tr ":" "\n"'
 alias ports='netstat -tulanp'
 alias tarc='tar -czf'
 alias tarx='tar -xzf'
-# interface
+# git interface
+alias gst='status -s'
+alias gco='checkout'
+alias gbn='git branch -vv'
+alias glg='git log --oneline'
+alias glast='git log -1 HEAD'
+alias gcm='git commit -m'
+alias gfe='git fetch'
+alias gcfg='git config --global -l'
+# tmux interface
 alias tm=tmux
 alias tml='tmux ls'
 alias tma='tmux attach -t'
