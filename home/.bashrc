@@ -68,9 +68,5 @@ add2path() {
 	export PATH="$1:$PATH"
 }
 
-vsc() {
-    code $1 && exit
-} 
-
 # my path
 #add2path "$HOME/myPrograms"
