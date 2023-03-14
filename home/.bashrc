@@ -64,9 +64,9 @@ alias tmk='tmux kill-session -t'
 alias tmnw='tmux new-window -n'
 
 # my function
+
+# my path
 add2path() {
 	export PATH="$1:$PATH"
 }
-
-# my path
 #add2path "$HOME/myPrograms"
