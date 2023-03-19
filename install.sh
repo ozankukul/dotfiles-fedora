@@ -3,7 +3,7 @@
 USERHOME=$HOME
 WORKDIR=$(pwd)
 
-sudo dnf remove -y dnfdragora libreoffice* mpv parole hexchat pidgin onboard
+sudo dnf remove -y dnfdragora libreoffice* thunderbird mpv parole hexchat pidgin onboard xawtv xfburn
 sudo dnf update -y
 
 #fonts
