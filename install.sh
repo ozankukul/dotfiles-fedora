@@ -74,7 +74,8 @@ sudo dnf config-manager --set-enabled google-chrome
 onlyoffice="https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm"
 zoom="https://zoom.us/client/latest/zoom_x86_64.rpm"
 sudo dnf install -y openh264 htop bat git 
-sudo dnf install -y code google-chrome-stable steam telegram discord $onlyoffice $zoom
+sudo dnf install -y code google-chrome-stable steam telegram discord $onlyoffice 
+sudo dnf install -y qbittorrent xournalpp $zoom
 
 # install flatpak & flathub
 # sudo dnf install -y flatpak
