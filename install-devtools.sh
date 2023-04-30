@@ -3,11 +3,14 @@
 # install devtools
 sudo dnf install -y @virtualization hugo
 sudo dnf install -y podman postgresql postgresql-server nginx rabbitmq-server
-sudo dnf install -y golang nodejs dotnet nuget java-17-openjdk maven
+sudo dnf install -y golang dotnet nuget java-17-openjdk maven
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# install nodejs
+sudo dnf install -y nodejs 
 sudo npm install -g pnpm
 pnpm setup && source $HOME/.bashrc
 pnpm install -g typescript
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # install python3.7
 dnf install -y python3.7
