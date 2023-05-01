@@ -7,19 +7,19 @@ useredshift=true
 usexflux=false
 
 [com/github/maoschanz/drawing]
-last-active-tool='eraser'
-last-version='0.8.5'
-maximized=false
+last-active-tool='pencil'
+last-version='1.0.1'
+maximized=true
 
 [com/github/maoschanz/drawing/tools-options]
 last-active-shape='polygon'
 last-delete-replace='alpha'
-last-font-name='Sans'
-last-left-rgba=['0.8', '0.0', '0.0', '1.0']
+last-font-name='Serif'
+last-left-rgba=['0.0', '0.0', '0.0', '1.0']
 last-right-rgba=['1.0', '1.0', '0.0', '0.5']
 last-shape-filling='empty'
-last-size=5
-last-text-background='outline'
+last-size=14
+last-text-background='none'
 use-antialiasing=true
 
 [com/linuxmint/install]
@@ -43,13 +43,13 @@ window-width=790
 settings-migrated=true
 
 [io/github/celluloid-player/celluloid/window-state]
-height=821
+height=705
 loop-playlist=false
 maximized=false
 playlist-width=250
 show-playlist=false
-volume=0.5
-width=1294
+volume=1.0
+width=1440
 
 [org/blueman/general]
 window-properties=[500, 350, 1330, 236]
@@ -67,12 +67,12 @@ desktop-effects-map='traditional'
 desktop-effects-minimize='traditional'
 desktop-effects-on-dialogs=false
 desktop-effects-workspace=true
-enabled-applets=['panel1:left:0:menu@cinnamon.org:14', 'panel1:center:0:grouped-window-list@cinnamon.org:16', 'panel1:right:0:systray@cinnamon.org:17', 'panel1:right:1:xapp-status@cinnamon.org:18', 'panel1:right:2:notifications@cinnamon.org:19', 'panel1:right:4:printers@cinnamon.org:20', 'panel1:right:5:keyboard@cinnamon.org:22', 'panel1:right:6:favorites@cinnamon.org:23', 'panel1:right:7:network@cinnamon.org:24', 'panel1:right:8:power@cinnamon.org:26', 'panel1:right:9:calendar@cinnamon.org:27', 'panel1:left:1:workspace-switcher@cinnamon.org:28']
+enabled-applets=['panel1:left:0:menu@cinnamon.org:14', 'panel1:center:0:grouped-window-list@cinnamon.org:16', 'panel1:right:0:systray@cinnamon.org:17', 'panel1:right:0:xapp-status@cinnamon.org:18', 'panel1:right:3:notifications@cinnamon.org:19', 'panel1:right:5:printers@cinnamon.org:20', 'panel1:right:6:keyboard@cinnamon.org:22', 'panel1:right:4:favorites@cinnamon.org:23', 'panel1:right:7:network@cinnamon.org:24', 'panel1:right:8:power@cinnamon.org:26', 'panel1:right:9:calendar@cinnamon.org:27', 'panel1:left:1:workspace-switcher@cinnamon.org:28', 'panel1:right:2:spacer@cinnamon.org:39']
 enabled-desklets=@as []
 enabled-extensions=@as []
 favorite-apps=['mintinstall.desktop', 'cinnamon-settings.desktop', 'org.gnome.Terminal.desktop', 'nemo.desktop']
 hotcorner-layout=['expo:false:0', 'scale:false:0', 'scale:false:0', 'desktop:false:0']
-next-applet-id=29
+next-applet-id=40
 next-desklet-id=1
 no-adjacent-panel-barriers=false
 panel-edit-mode=false
@@ -92,7 +92,7 @@ quit-time-delay=60
 
 [org/cinnamon/desktop/a11y/applications]
 screen-keyboard-enabled=true
-screen-magnifier-enabled=false
+screen-magnifier-enabled=true
 screen-reader-enabled=false
 
 [org/cinnamon/desktop/a11y/keyboard]
@@ -101,6 +101,14 @@ mousekeys-accel-time=300
 mousekeys-init-delay=300
 mousekeys-max-speed=10
 slowkeys-delay=300
+
+[org/cinnamon/desktop/a11y/magnifier]
+lens-mode=false
+lens-shape='square'
+mag-factor=1.0
+mouse-tracking='proportional'
+screen-position='full-screen'
+scroll-at-edges=false
 
 [org/cinnamon/desktop/a11y/mouse]
 dwell-click-enabled=false
@@ -130,11 +138,11 @@ cursor-blink=false
 cursor-blink-time=1200
 cursor-size=24
 cursor-theme='Adwaita'
-font-name='Segoe UI 10'
+font-name='Segoe UI 12'
 gtk-key-theme='Mint-Y-Dark'
 gtk-overlay-scrollbars=true
-gtk-theme='Material-DeepOcean-BL-LB'
-gtk-theme-backup='Catppuccin-Mocha-B-LB'
+gtk-theme='my-gtk'
+gtk-theme-backup='Material-DeepOcean-BL-LB'
 icon-theme='Mint-Y-Dark'
 icon-theme-backup='Mint-Y-Dark'
 text-scaling-factor=1.0
@@ -189,7 +197,7 @@ min-window-opacity=80
 num-workspaces=5
 theme='Mint-Y-Dark'
 theme-backup='Mint-Y-Dark'
-titlebar-font='Segoe UI 10'
+titlebar-font='Segoe UI 12'
 
 [org/cinnamon/launcher]
 check-frequency=300
@@ -212,6 +220,7 @@ sleep-display-ac=600
 antialiasing='rgba'
 buttons-have-icons=false
 hinting='slight'
+menus-have-icons=true
 rgba-order='rgb'
 
 [org/cinnamon/sounds]
@@ -227,7 +236,7 @@ tile-enabled=false
 unmaximize-enabled=false
 
 [org/cinnamon/theme]
-name='Material-DeepOcean-BL-LB'
+name='my-gtk'
 
 [org/fedoraproject/FirewallConfig]
 show-active-bindings=true
@@ -256,7 +265,7 @@ window-position=(585, 286)
 window-size=(800, 600)
 
 [org/gnome/charmap/window-state]
-size=(1080, 590)
+size=(1080, 596)
 
 [org/gnome/desktop/a11y/applications]
 screen-keyboard-enabled=true
@@ -275,7 +284,7 @@ show-weekdate=false
 [org/gnome/desktop/interface]
 clock-format='24h'
 gtk-im-module='gtk-im-context-simple:xim'
-monospace-font-name='Cascadia Mono 10'
+monospace-font-name='Cascadia Mono 12'
 toolkit-accessibility=true
 
 [org/gnome/evolution-data-server]
@@ -315,7 +324,7 @@ maximized=false
 network-total-in-bits=false
 show-dependencies=false
 show-whose-processes='user'
-window-state=(700, 500, 578, 333)
+window-state=(960, 1060, 960, 0)
 
 [org/gnome/gnome-system-monitor/disktreenew]
 col-6-visible=true
@@ -343,6 +352,14 @@ enable-smartcard-authentication=false
 [org/gnome/nm-applet]
 disable-connected-notifications=true
 
+[org/gnome/nm-applet/eap/10632a8a-734e-4090-9ab2-79c8835e2ecc]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/nm-applet/eap/b094ef6f-130b-307f-97ef-e6f316cccbd8]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/power-manager]
 info-history-type='charge'
 info-stats-type='discharge-accuracy'
@@ -368,6 +385,16 @@ initial-stations-loaded=true
 
 [org/gnome/rhythmbox/rhythmdb]
 locations=['file:///home/ozan/Music']
+
+[org/gnome/shotwell/crop-settings]
+last-crop-height=1
+last-crop-menu-choice=0
+last-crop-width=1
+
+[org/gnome/shotwell/preferences/window]
+direct-height=768
+direct-maximize=false
+direct-width=1024
 
 [org/gnome/shotwell/profiles/crop-settings]
 last-crop-height=1
@@ -413,13 +440,15 @@ toggle-menubar='F10'
 
 [org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 audible-bell=false
-background-color='rgb(0,0,0)'
+background-color='rgb(5,5,5)'
 background-transparency-percent=8
 bold-color-same-as-fg=true
+cell-height-scale=1.0
+cell-width-scale=1.0
 cursor-blink-mode='on'
 cursor-shape='ibeam'
 default-size-columns=134
-font='Cascadia Code 12'
+font='Cascadia Mono 14'
 foreground-color='rgb(255,255,255)'
 login-shell=false
 palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
@@ -431,8 +460,8 @@ use-theme-transparency=false
 use-transparent-background=false
 
 [org/gtk/settings/color-chooser]
-custom-colors=[(0.80000000000000004, 0.0, 0.0, 1.0), (1.0, 1.0, 0.0, 0.5), (0.023333333333333334, 0.023333333333333334, 0.023333333333333334, 1.0), (0.97666666666666668, 0.97666666666666668, 0.97666666666666668, 1.0), (0.011764705882352941, 0.011764705882352941, 0.011764705882352941, 1.0), (0.013333333333333334, 0.013333333333333334, 0.013333333333333334, 1.0), (0.096666666666666679, 0.096666666666666679, 0.096666666666666679, 1.0), (0.1803921568627451, 0.20392156862745098, 0.21176470588235294, 1.0)]
-selected-color=(true, 1.0, 1.0, 0.0, 0.5)
+custom-colors=[(0.027450980392156862, 0.027450980392156862, 0.027450980392156862, 1.0), (0.019607843137254902, 0.019607843137254902, 0.019607843137254902, 1.0), (0.062745098039215685, 0.062745098039215685, 0.062745098039215685, 1.0), (0.80000000000000004, 0.0, 0.0, 1.0), (1.0, 1.0, 0.0, 0.5), (0.023333333333333334, 0.023333333333333334, 0.023333333333333334, 1.0), (0.97666666666666668, 0.97666666666666668, 0.97666666666666668, 1.0), (0.011764705882352941, 0.011764705882352941, 0.011764705882352941, 1.0)]
+selected-color=(true, 0.019607843137254902, 0.019607843137254902, 0.019607843137254902, 1.0)
 
 [org/gtk/settings/emoji-chooser]
 recent-emoji=[(([uint32 128578], 'slightly smiling face', ''), uint32 0)]
@@ -443,16 +472,17 @@ location-mode='path-bar'
 show-hidden=false
 show-size-column=true
 show-type-column=true
-sidebar-width=165
+sidebar-width=183
 sort-column='name'
 sort-directories-first=true
 sort-order='ascending'
 type-format='category'
-window-position=(412, 148)
+window-position=(412, 66)
 window-size=(1096, 822)
 
 [org/mate/eom/ui]
 image-collection=false
+sidebar=false
 
 [org/mate/panel/general]
 object-id-list=['menu-bar', 'show-desktop', 'separator', 'launcher-caja', 'launcher-terminal', 'launcher-firefox', 'window-list', 'notification-area', 'xapp-status', 'clock']
@@ -547,11 +577,14 @@ y-bottom=0
 
 [org/nemo/desktop]
 computer-icon-visible=false
-font='Segoe UI 10'
+font='Segoe UI 12'
 home-icon-visible=false
 network-icon-visible=false
 trash-icon-visible=false
 volumes-visible=false
+
+[org/nemo/icon-view]
+default-zoom-level='small'
 
 [org/nemo/preferences]
 default-folder-viewer='list-view'
@@ -561,9 +594,9 @@ show-location-entry=true
 show-open-in-terminal-toolbar=false
 
 [org/nemo/window-state]
-geometry='960x492+355+518'
+geometry='1042x526+433+196'
 maximized=false
-side-pane-view='tree'
+side-pane-view='places'
 sidebar-bookmark-breakpoint=5
 sidebar-width=188
 start-with-menu-bar=false
@@ -626,7 +659,7 @@ scaling=1
 vm-window-size=(1024, 842)
 
 [org/x/apps/favorites]
-root-metadata=['string==metadata::nemo-list-view-sort-column==name', 'string==metadata::nemo-list-view-sort-reversed==false']
+root-metadata=['string==metadata::nemo-list-view-sort-column==name', 'string==metadata::nemo-list-view-sort-reversed==false', 'string==metadata::nemo-list-view-zoom-level==1']
 
 [org/x/editor/plugins]
 active-plugins=['sort', 'textsize', 'filebrowser', 'docinfo', 'joinlines', 'open-uri-context-menu', 'time']
@@ -680,6 +713,9 @@ catalogs-2-10=true
 [org/x/pix/general]
 active-extensions=['23hq', 'bookmarks', 'burn_disc', 'catalogs', 'change_date', 'comments', 'contact_sheet', 'convert_format', 'desktop_background', 'edit_metadata', 'exiv2_tools', 'facebook', 'file_manager', 'file_tools', 'find_duplicates', 'flicker', 'gstreamer_tools', 'gstreamer_utils', 'image_print', 'image_rotation', 'image_viewer', 'importer', 'jpeg_utils', 'list_tools', 'oauth', 'photo_importer', 'photobucket', 'picasaweb', 'raw_files', 'red_eye_removal', 'rename_series', 'resize_images', 'search', 'selections', 'slideshow', 'webalbums']
 
+[org/x/reader]
+document-directory=@ms 'file:///home/ozan/Desktop'
+
 [org/x/reader/default]
 continuous=true
 dual-page=false
@@ -690,7 +726,7 @@ show-sidebar=false
 sidebar-page='thumbnails'
 sidebar-size=175
 sizing-mode='free'
-window-ratio=(2.2805016020286204, 1.2144728681302013)
+window-ratio=(2.6666666666666665, 1.2037037037037037)
 zoom=1.4392794152738457
 
 [org/x/viewer/ui]
@@ -706,3 +742,15 @@ maximized=true
 
 [org/x/warpinator/preferences]
 receiving-folder='file:///home/ozan/Warpinator'
+
+[system/proxy]
+autoconfig-url='127.0.0.1:8000'
+mode='none'
+
+[system/proxy/http]
+host='127.0.0.1'
+port=8000
+
+[system/proxy/https]
+host='127.0.0.1'
+port=8000
