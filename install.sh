@@ -4,6 +4,7 @@ USERHOME=$HOME
 WORKDIR=$(pwd)
 
 sudo dnf remove -y dnfdragora libreoffice* thunderbird mpv parole hexchat pidgin onboard xawtv xfburn
+sudo dnf install -y git
 sudo dnf update -y
 
 #fonts
@@ -72,7 +73,7 @@ sudo dnf config-manager --set-enabled google-chrome
 # install programs
 onlyoffice="https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm"
 zoom="https://zoom.us/client/latest/zoom_x86_64.rpm"
-sudo dnf install -y openh264 htop bat git 
+sudo dnf install -y openh264 htop bat
 sudo dnf install -y code google-chrome-stable steam telegram-desktop discord $onlyoffice 
 sudo dnf install -y qbittorrent $zoom
 
