@@ -26,26 +26,38 @@ fi
 
 unset rc
 
-
 # my prompt
-export PS1="\n\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;11m\]\w\[$(tput sgr0)\]\n\[$(tput sgr0)\]\[\033[38;5;14m\]\t\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;13m\]\\$\[$(tput sgr0)\] \[$(tput sgr0)\]"
 bind 'set completion-ignore-case on'
 
-## my alias
-# abbr
+## thick
+export PS1='\[\e[0;1;94m\]┏ \[\e[0;1;93m\]\w\[\e[0m\] \[\e[0;1;92m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n\[\e[0;1;94m\]┗━▶ \[\e[0m\]'
+
+## thin
+# export PS1='\[\e[0;1;94m\]╭ \[\e[0;93m\]\w\[\e[0m\] \[\e[0;92m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n\[\e[0;1;94m\]╰─▶ \[\e[0m\]'
+
+
+# my alias
+## abbr
 alias c=clear
-alias x=exit
 alias dnf='sudo dnf'
 alias sc='sudo systemctl'
 alias ip='ip --color=auto'
-alias py=python
+alias py=python3.7
+alias pyp='py -m pip'
 alias pm=podman
-# util
+alias x=exit
+## ls
+alias ls='ls -p --group-directories-first --color=auto'
+alias l='ls -p --group-directories-first --color=auto'
+alias l.='ls -dp --group-directories-first .* --color=auto'
+alias la='ls -ap --group-directories-first --color=auto'
+alias ll='ls -ahlp --group-directories-first --color=auto'
+## util
 alias pat='echo $PATH | tr ":" "\n"'
 alias ports='netstat -tulanp'
 alias tarc='tar -czf'
 alias tarx='tar -xzf'
-# git interface
+## git interface
 alias gst='git status -s'
 alias gco='git checkout'
 alias gbn='git branch -vv'
@@ -54,7 +66,10 @@ alias glast='git log -1 HEAD'
 alias gcm='git commit -m'
 alias gfe='git fetch'
 alias gcfg='git config --global -l'
-# tmux interface
+alias gadd='git add'
+alias gpull='git pull'
+alias gpush='git push'
+## tmux interface
 alias tm=tmux
 alias tml='tmux ls'
 alias tma='tmux attach -t'
@@ -69,4 +84,4 @@ alias tmnw='tmux new-window -n'
 add2path() {
 	export PATH="$1:$PATH"
 }
-#add2path "$HOME/myPrograms"
+##add2path "$HOME/myPrograms"
