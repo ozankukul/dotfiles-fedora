@@ -66,6 +66,9 @@ sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/dock
 # enable vscode
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+# enable microsoft edge
+sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
+sudo mv /etc/yum.repos.d/packages.microsoft.com_yumrepos_edge.repo /etc/yum.repos.d/microsoft-edge-dev.repo
 # enable google chrome
 sudo dnf install -y fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
@@ -74,7 +77,7 @@ sudo dnf config-manager --set-enabled google-chrome
 onlyoffice="https://download.onlyoffice.com/install/desktop/editors/linux/onlyoffice-desktopeditors.x86_64.rpm"
 zoom="https://zoom.us/client/latest/zoom_x86_64.rpm"
 sudo dnf install -y openh264 htop bat
-sudo dnf install -y code google-chrome-stable $onlyoffice
+sudo dnf install -y code google-chrome-stable microsoft-edge-stable $onlyoffice
 sudo dnf install -y telegram-desktop discord $zoom
 sudo dnf install -y steam qbittorrent
 
