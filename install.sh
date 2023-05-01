@@ -15,8 +15,7 @@ cp -r home/.cinnamon $USERHOME
 cp -r home/.config/* $USERHOME/.config/
 
 # themes
-mkdir $USERHOME/.themes
-cp -r home/.themes/* $USERHOME/.themes/
+git clone https://github.com/ozankukul/my-gtk.git $USERHOME/.themes/my-gtk
 
 # dotfiles
 cp home/.gitconfig home/.bashrc home/.inputrc home/.tmux.conf $USERHOME
