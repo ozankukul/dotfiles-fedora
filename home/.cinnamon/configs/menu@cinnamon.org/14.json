@@ -77,46 +77,18 @@
     },
     "menu-custom": {
         "type": "switch",
-        "default": true,
+        "default": false,
         "description": "Use a custom icon and label",
         "tooltip": "Check this to specify a custom icon and label",
         "value": true
     },
     "menu-icon": {
         "type": "iconfilechooser",
-        "default": "linuxmint-logo-ring-symbolic",
+        "default": "cinnamon-symbolic",
         "description": "Icon",
         "tooltip": "Select an icon to show in the panel.",
-        "default_icon": "linuxmint-logo-ring-symbolic",
+        "default_icon": "cinnamon-symbolic",
         "dependency": "menu-custom",
-        "icon_categories": [
-            {
-                "name": "Linux Mint",
-                "icons": [
-                    "linuxmint-logo",
-                    "linuxmint-logo-badge",
-                    "linuxmint-logo-badge-symbolic",
-                    "linuxmint-logo-filled-badge",
-                    "linuxmint-logo-filled-leaf-badge",
-                    "linuxmint-logo-filled-leaf",
-                    "linuxmint-logo-filled-ring",
-                    "linuxmint-logo-leaf-badge",
-                    "linuxmint-logo-leaf-badge-symbolic",
-                    "linuxmint-logo-leaf",
-                    "linuxmint-logo-leaf-symbolic",
-                    "linuxmint-logo-neon",
-                    "linuxmint-logo-ring",
-                    "linuxmint-logo-ring-symbolic",
-                    "linuxmint-logo-simple",
-                    "linuxmint-logo-simple-symbolic",
-                    "cinnamon-symbolic",
-                    "emblem-favorite-symbolic",
-                    "user-bookmarks-symbolic",
-                    "start-here-symbolic"
-                ]
-            }
-        ],
-        "default_category": "Linux Mint",
         "value": "start-here-symbolic"
     },
     "menu-icon-size": {
@@ -132,7 +104,7 @@
     },
     "menu-label": {
         "type": "entry",
-        "default": "",
+        "default": "Menu",
         "description": "Text",
         "tooltip": "Enter custom text to show in the panel.",
         "dependency": "menu-custom",
@@ -291,5 +263,5 @@
         "callback": "_launch_editor",
         "tooltip": "Press this button to customize your menu entries."
     },
-    "__md5__": "38c9122e36f6267fae12706a694ac35f0a188a8ff9c3d3f4fa2c1cd14fe0d0a0"
+    "__md5__": "38c9122e36f6267fae12706a694ac35f"
 }
