@@ -28,13 +28,7 @@ unset rc
 
 # my prompt
 bind 'set completion-ignore-case on'
-
-## thick
-export PS1='\[\e[0;1;94m\]┏ \[\e[0;1;93m\]\w\[\e[0m\] \[\e[0;1;92m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n\[\e[0;1;94m\]┗━▶ \[\e[0m\]'
-
-## thin
-# export PS1='\[\e[0;1;94m\]╭ \[\e[0;93m\]\w\[\e[0m\] \[\e[0;92m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n\[\e[0;1;94m\]╰─▶ \[\e[0m\]'
-
+export PS1='\[\e[0;1;94m\]╭ \[\e[0;1;93m\]\w\[\e[0m\] \[\e[0;1;92m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2)\n\[\e[0;1;94m\]╰─▶ \[\e[0m\]'
 
 # my alias
 ## abbr
